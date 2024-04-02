@@ -23,26 +23,6 @@ public class UserService implements UserDetailsService
 	@Autowired
 	private PasswordEncoder passwordEncoder;
 
-	public void saveUser(UserDto userDto)
-	{
-		User user = new User();
-		user.setFirstName(userDto.getFirstName());
-		user.setLastName(userDto.getLastName());
-		user.setEmail(userDto.getEmail());
-		
-		user.setPassword(passwordEncoder.encode(userDto.getPassword()));
-		//user.setRoles(Arrays.asList(roleRepository.findByName("ROLE_USER")));
-		Role role = roleRepository.findByName("ROLE_ADMIN");
-		System.out.println("123FROM service " + role);
-//		if (role == null)
-//		{
-//			role = checkRoleExist();
-//		}
-		
-		//user.setRoles(Arrays.asList(role));
-		userRepository.save(user);
-	}
-
 	public User findUserByEmail(String email)
 	{
 		return userRepository.findByEmail(email);

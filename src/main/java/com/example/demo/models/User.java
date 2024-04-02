@@ -100,9 +100,8 @@ public class User implements UserDetails
 	@Override
 	public String toString()
 	{
-		//System.out.println(userRoles.get(0).getRole().getName());
 		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
-				+ ", password=" + password + ", userRoles=" + userRoles.get(0).getRole().getName() + " " + userRoles.get(1).getRole().getName() + "]";
+				+ ", password=" + password + ", userRoles=" + userRoles + "]";
 	}
 	
 	@Override

@@ -51,9 +51,9 @@ public class Privilege {
 		this.role = role;
 	}
 
-//	@Override
-//	public String toString()
-//	{
-//		return "UserRole [id=" + id + ", user=" + user + ", role=" + role + "]";
-//	}
+	@Override
+	public String toString()
+	{
+		return "UserRole [id=" + id + ", role=" + role.getName() + "]";
+	}
 }

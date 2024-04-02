@@ -17,7 +17,6 @@ public class Startup implements CommandLineRunner
 	@Override
 	public void run(String... args) throws Exception
 	{
-		System.out.println("POCHNAHME==================================================");
 		userService.createUser("admin", "admin", "admin", "admin@admin.com", Arrays.asList("ROLE_USER", "ROLE_ADMIN"));
 		System.out.println(userService.findAllUsers());
 	}

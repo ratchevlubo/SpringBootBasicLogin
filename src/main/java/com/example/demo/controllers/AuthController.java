@@ -1,5 +1,6 @@
 package com.example.demo.controllers;
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,7 +57,7 @@ public class AuthController
 			return "/register";
 		}
 
-		userService.saveUser(userDto);
+		userService.createUser(userDto.getFirstName(), userDto.getLastName(), userDto.getPassword(), userDto.getEmail(), Arrays.asList("ROLE_USER"));
 		return "redirect:/register?success";
 	}
 
